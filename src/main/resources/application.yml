@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: kafka-proto-consumer
+server:
+  port: 9001
+kafka:
+  config:
+    boot-strap-server: "127.0.0.1:9092"
+    value-deserializer: "io.confluent.kafka.serializers.protobuf.KafkaProtobufDeserializer"
+    schema-registry-url: "http://127.0.0.1:8081"
+    topic-user:
+      group-id: "topic.user.message.groupId"
+      topic: "topic.user.message"
